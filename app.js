@@ -1,12 +1,12 @@
-// let voters = [{ name: "tim", ideology: "Liberal"}, { name: "kim", ideology: "Conservative"}, { name: "jim", ideology: "Neutral"}, { name: "bim", ideology: "Liberal"}, { name: "lim", ideology: "Conservative"}, { name: "pim", ideology: "Neutral"}];
-// let democrat_candidates = [{ name: "tim", party: "Democrat", votes: 0}];
-// let republican_candidates = [{ name: "jim", party: "Republican", votes: 0}];
-// let independent_candidates = [{ name: "kim", party: "Independent", votes: 0}];
+let voters = [{ name: "tim", ideology: "Liberal"}, { name: "kim", ideology: "Conservative"}, { name: "jim", ideology: "Neutral"}, { name: "bim", ideology: "Liberal"}, { name: "lim", ideology: "Conservative"}, { name: "pim", ideology: "Neutral"}];
+let democrat_candidates = [{ name: "tim", party: "Democrat", votes: 0}];
+let republican_candidates = [{ name: "jim", party: "Republican", votes: 0}];
+let independent_candidates = [{ name: "kim", party: "Independent", votes: 0}];
 
-let voters = [];
-let democrat_candidates = [];
-let republican_candidates = [];
-let independent_candidates = [];
+// let voters = [];
+// let democrat_candidates = [];
+// let republican_candidates = [];
+// let independent_candidates = [];
 let finalBattle = [];
 
 class Person{
@@ -72,7 +72,7 @@ $('#candidate-form form').on('submit', function(event) {
 	$('#vote-btn-div').on('click', function(event){
 		vote();
 		win();
-		alert(win());
+		alert(win().name);
 		// console.log(finalBattle);
 		// console.log(win());
 	})
@@ -139,6 +139,5 @@ function win () {
 
 	return finalBattle.reduce(function(current, acc){return kingNothing = (current.votes > acc.votes) ? current : acc })
 	}
-
 
 
